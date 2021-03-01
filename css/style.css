@@ -66,6 +66,25 @@ body {
   margin: auto;
 }
 
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.text {
+  /* background-color: #ddd; */
+  font-style: italic;
+  color: #e40404;
+  font-size: 1.5rem;
+  /* padding: 8px 12px; */
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+}
+
+
 .center{
   text-align: center;
 }
