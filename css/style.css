@@ -139,3 +139,15 @@ body {
     float: none;
   }
 }
+
+/* the container will be smller in screen size of 850px and smaller. */
+@media only screen and (max-width: 850px) {
+  .view-item {
+    width: 700px;
+    height: 350px;
+  }
+  .prev, .next {
+    margin-left: 17.9rem; /* == 335px */
+    margin-right: 17.9rem; 
+  }
+}
