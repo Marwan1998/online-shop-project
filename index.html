@@ -23,28 +23,27 @@
     <div class="mani-body-container">
       <!-- main div -->
 
-      <div class="">
-        <!-- container div -->
-        <div class="contanier ">
-          <img class="view-item" id="ContImg" src="images/img1.jpg" alt="img1" />
+      <!-- container div -->
+      <div class="containerImage center">
+        <img class="view-item" id="ContImg" src="images/img1.jpg" alt="img1" />
+        <div class="nextPrevButtons">
+          <!-- Two Buttons div -->
+          <a class="prev" onclick="prev()">&#10095;</a>
+          <a class="next" onclick="next()">&#10094;</a>
         </div>
         <div class="center">
-          <!-- Two Buttons div -->
-          <button onclick="next()">next</button>
-          <button onclick="prev()">prev</button>
-        </div>
-        <div class="center"> <!-- h1 and p div -->
-          <h1 class="text center" id="imgH1" >Our T-Shirts</h1>
-          <p class="" id="imgP" >here you can find all of our awesome T-Shirts</p>
+          <!-- h1 and p div -->
+          <h1 class="text" id="imgH1">Our T-Shirts</h1>
+          <p class="para" id="imgP">
+            here you can find all of our awesome T-Shirts
+          </p>
           <div class="hidden">
-            <button onclick="setImgNumber(0)">--</button>
-            <button onclick="setImgNumber(1)">--</button>
-            <button onclick="setImgNumber(2)">--</button>
+            <span class="dot" onclick="setImgNumber(0)"></span>
+            <span class="dot" onclick="setImgNumber(1)"></span>
+            <span class="dot" onclick="setImgNumber(2)"></span>
           </div>
         </div>
       </div>
-
-
     </div>
 
     <!-- footer here, to Degla. -->

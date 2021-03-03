@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 
-/* Header Style  */
+/* ----------------------- Header Style ------------------------- */
 body {
   margin: 0px;
-  background-color: #F7F6F3;
+  background-color: #beb9aa;
 }
 
 .header {
@@ -52,10 +52,12 @@ body {
   float: right;
 }
 
-/* Main Container Style */
-.contanier {
+
+/* ----------------------- Main Container Style ---------------------- */
+
+.containerImage {
+  position: relative;
   padding-top: 1rem;
-  text-align: center;
 }
 
 .view-item {
@@ -66,24 +68,57 @@ body {
   margin: auto;
 }
 
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer; /* change the mouse pointer to click */
+  position: absolute; 
+  margin-left: 21rem; /* == 335px */
+  margin-right: 21rem; 
+  /* width: auto; */
+  padding: 50px 25px 50px 25px;
+  color: rgb(255, 255, 255); 
+  font-weight: bold;
+  font-size: 1.6rem;
+  transition: 0.6s ease;
+  /* border-radius: 0 3px 3px 0; */
+  user-select: none;
+}
+
+/* next and previous buttons div */
+.nextPrevButtons{
+  background-color: rgb(68, 52, 52);
+  color: #000;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  /* border-radius: 3px 0 0 3px; */
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(46, 41, 41, 0.8);
 }
 
 .text {
-  /* background-color: #ddd; */
-  font-style: italic;
-  color: #e40404;
-  font-size: 1.5rem;
-  /* padding: 8px 12px; */
   position: absolute;
-  bottom: -30px;
+  font-style: italic;
+  color: #ffffff;
+  font-size: 1.5rem;
+  bottom: 3.5rem;
   width: 100%;
+  user-select: none;
 }
 
+.para{
+  font-style: italic;
+  color: #000000;
+  font-size: 1.25rem;
+}
 
 .center{
   text-align: center;
