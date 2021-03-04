@@ -58,6 +58,7 @@ body {
 .containerImage {
   position: relative;
   padding-top: 1rem;
+  user-select: none;
 }
 
 .view-item {
@@ -94,7 +95,7 @@ body {
 }
 
 /* Position the "next button" to the right */
-.next {
+.prev {
   right: 0;
   /* border-radius: 3px 0 0 3px; */
 }
@@ -118,6 +119,8 @@ body {
   font-style: italic;
   color: #000000;
   font-size: 1.25rem;
+  margin-top: 0px;
+  user-select: none;
 }
 
 .center{
@@ -127,6 +130,32 @@ body {
 .hidden{
   display: none;
 }
+
+/* The three dots buttons */
+
+.dotDiv{
+  user-select: none;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 3px;
+  background-color: #868172;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color:#444343;
+}
+
+/* ---------------------------------------------------------------- */
+
+
+
 
 @media screen and (max-width: 500px) {
   .header a {
