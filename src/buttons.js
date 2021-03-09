@@ -1,10 +1,9 @@
 
 // all images addresses in the main container should be here.
 const images = [
-  "images/img1.jpg",
-  "images/img2.jpg",
-  "images/img3.jpg",
-    // "images/img4.jpg",
+  "images/t-shirts.jpg",
+  "images/bags.jpg",
+  "images/shoes.jpg",
 ];
 
 // the h1 and p text for each image (it's array of objects).
@@ -22,15 +21,15 @@ let i;
 // when pressing on next button this function will triggered.
 let next = function () {
   // defining which image should display.
-  if (alt == "img1") {
+  if (alt == "t-shirts") {
     i = 1;
-    alt = "img2";
-  } else if (alt == "img2") {
+    alt = "bags";
+  } else if (alt == "bags") {
     i = 2;
-    alt = "img3";
-  } else if (alt == "img3") {
+    alt = "shoes";
+  } else if (alt == "shoes") {
     i = 0;
-    alt = "img1";
+    alt = "t-shirts";
   }
 
   img.src = images[i]; // set the image.
@@ -41,15 +40,15 @@ let next = function () {
 // when pressing on prev button this function will triggered.
 let prev = function () {
   // defining which image should display.
-  if (alt == "img1") {
+  if (alt == "t-shirts") {
     i = 2;
-    alt = "img3";
-  } else if (alt == "img2") {
+    alt = "shoes";
+  } else if (alt == "bags") {
     i = 0;
-    alt = "img1";
-  } else if (alt == "img3") {
+    alt = "t-shirts";
+  } else if (alt == "shoes") {
     i = 1;
-    alt = "img2";
+    alt = "bags";
   }
 
   img.src = images[i]; // set the image.
