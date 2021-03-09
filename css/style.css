@@ -92,7 +92,7 @@ body {
   background-color: rgb(68, 52, 52);
   color: #000;
   position: absolute;
-  top: 35%;
+  top: 47%;
   left: 50%;
 }
 
@@ -180,5 +180,8 @@ body {
   .prev, .next {
     margin-left: 17.9rem; /* == 335px */
     margin-right: 17.9rem; 
+  }
+  .containerImage {
+    padding-top: 75px;
   }
 }
