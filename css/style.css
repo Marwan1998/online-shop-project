@@ -59,7 +59,7 @@ body {
 
 .containerImage {
   position: relative;
-  padding-top: 150px;
+  padding-top: 80px;
   user-select: none;
 }
 
@@ -92,7 +92,7 @@ body {
   background-color: rgb(68, 52, 52);
   color: #000;
   position: absolute;
-  top: 47%;
+  top: 51%;
   left: 50%;
 }
 
@@ -112,7 +112,7 @@ body {
   font-style: italic;
   color: #ffffff;
   font-size: 1.5rem;
-  bottom: 3.5rem;
+  bottom: 2.5rem;
   width: 100%;
   user-select: none;
 }
@@ -120,8 +120,9 @@ body {
 .para{
   font-style: italic;
   color: #000000;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   margin-top: 0px;
+  margin-bottom: 60px;
   user-select: none;
 }
 
@@ -137,6 +138,8 @@ body {
 
 .dotDiv{
   user-select: none;
+  margin-top: 10px;
+  margin-bottom: 1.2rem;
 }
 
 .dot {
