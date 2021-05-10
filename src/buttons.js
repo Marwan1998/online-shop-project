@@ -9,8 +9,9 @@ const images = [
 // the h1 and p text for each image (it's array of objects).
 const clarifications = [
   { h1: "Our T-Shirts Brand", p: "&#8681; here you can find all of our awesome T-Shirts! &#8681;",},
-  { h1: "Our Shoes Brand", p: "&#8681; here you can find all of our awesome Shoes! &#8681;" },
   { h1: "Our Bags Brand", p: "&#8681; here you can find all of our awesome Bags! &#8681;" },
+  { h1: "Our Shoes Brand", p: "&#8681; here you can find all of our awesome Shoes! &#8681;" },
+  
 ];
 
 // some globle declaration.
