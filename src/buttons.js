@@ -1,4 +1,3 @@
-
 // all images addresses in the main container should be here.
 const images = [ // Model
   "images/t-shirts.jpg",
@@ -86,4 +85,3 @@ let setDotState = function(setIndex){
   }
 
 }
-
