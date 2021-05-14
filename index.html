@@ -2,8 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>Shop Name here</title>
-    <!-- Need to change the title -->
+    <title>Clothes</title>
     <link rel="stylesheet" href="css/style.css" />
     <!-- any other links will be here. -->
   </head>
@@ -31,16 +30,16 @@
         <img class="view-item" id="ContImg" src="images/t-shirts.jpg" alt="t-shirts" />
         <div class="nextPrevButtons">
           <!-- Two Buttons div -->
-          <a class="next" onclick="next()">&#10095;</a>
-          <a class="prev" onclick="prev()">&#10094;</a>
+          <a class="next" >&#10095;</a> <!-- onclick="prev()" -->
+          <a class="prev" >&#10094;</a> <!-- onclick="next()" -->
         </div>
         <div class="center">
           <!-- h1 and p div -->
           <h1 class="text" id="imgH1">Our T-Shirts Brand</h1>
           <div class="dotDiv center">
-            <span class="dot active" onclick="setImgNumber(0)"></span>
-            <span class="dot" onclick="setImgNumber(1)"></span>
-            <span class="dot" onclick="setImgNumber(2)"></span>
+            <span id="dot0" class="dot active" ></span> <!-- onclick="setImgNumber(0)" -->
+            <span id="dot1" class="dot" ></span> <!-- onclick="setImgNumber(1)" -->
+            <span id="dot2" class="dot" ></span> <!-- onclick="setImgNumber(2)" -->
           </div>
         </div>
       </div>
@@ -48,6 +47,6 @@
 
     <!-- footer here, to Degla. -->
 
-    <script src="src/buttons.js"></script>
+    <script src="src/buttonsMVC.js"></script>
   </body>
 </html>
