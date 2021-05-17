@@ -159,9 +159,9 @@ controller = (function (data, view) {
 
   return {
     // start funtion
-    init: () => startEvents(),
+    start: () => startEvents(),
   };
 })(data, view);
 
 // start the controller
-controller.init();
+controller.start();
