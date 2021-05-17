@@ -27,7 +27,11 @@ data = (function () {
 
   return {
     getAltByIndex: (index) => imageAlt[index], // get img alt to certain image
-    getIndex: (resiveAlt) => imageAlt.findIndex((value) => value == resiveAlt), // get index for certain image alt
+    getIndex: function (callBackAlt) {
+      // get index for certain image by calling fuction callback
+      var resivedAlt = callBackAlt();
+      return imageAlt.findIndex((value) => value == resivedAlt);
+    },
     getimage: (index) => images[index],
     getClarificate: (index) => clarifications[index],
   };
@@ -61,13 +65,13 @@ view = (function () {
           else if (currentIndex === 1) return 2;
           else return 0;
         }
-        case "prev":
-          {
-            if (currentIndex === 0) return 2;
-            else if (currentIndex === 1) return 0;
-            else return 1;
-          }
-        default: return 0;
+        case "prev": {
+          if (currentIndex === 0) return 2;
+          else if (currentIndex === 1) return 0;
+          else return 1;
+        }
+        default:
+          return 0;
       }
     },
 
@@ -122,7 +126,7 @@ controller = (function (data, view) {
 
   let setNewImage = function (nextOrPrev) {
     // defines which button pressed and call set image
-    let index = data.getIndex(view.getAlt());
+    let index = data.getIndex(view.getAlt);
     let nextIndex = view.getNextIndex(index, nextOrPrev);
     setNewImageByIndex(nextIndex);
   };
