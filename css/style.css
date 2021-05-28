@@ -157,6 +157,7 @@ body {
   background-color:#444343;
 }
 /* ------------- cart button ----------- */
+
 .btn {
 	color: #494949 !important;
 	text-transform: uppercase;
@@ -165,14 +166,15 @@ body {
 	padding: 20px;
 	border: 1px solid #494949 !important;
 	display: inline-block;
-	transition: all 0.4s ease 0s;
+	transition: all 0.5s ease 0s;
   cursor: pointer;
 }
+
 .btn:hover {
 	color: #ffffff !important;
 	background: #e6d3af;
 	border-color: #c7b289 !important;
-	transition: all 0.4s ease 0s;
+	transition: all 0.5s ease 0s;
 }
 
 
