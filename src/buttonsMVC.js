@@ -1,15 +1,15 @@
-//Mode
+//Model
 data = (function () {
   console.log("it's the model data");
 
-  const images = [
+  const _images = [
     // all images addresses in the main container should be here.
     "images/t-shirts.jpg",
     "images/bags.jpg",
     "images/shoes.jpg",
   ];
   // the h1 and p text for each image (it's array of objects).
-  const clarifications = [
+  const _clarifications = [
     {
       h1: "Our T-Shirts Brand",
       p: "&#8681; here you can find all of our awesome T-Shirts! &#8681;",
@@ -23,17 +23,17 @@ data = (function () {
       p: "&#8681; here you can find all of our awesome Shoes! &#8681;",
     },
   ];
-  const imageAlt = ["t-shirts", "bags", "shoes"];
+  const _imageAlt = ["t-shirts", "bags", "shoes"];
 
   return {
-    getAltByIndex: (index) => imageAlt[index], // get img alt to certain image
+    getAltByIndex: (index) => _imageAlt[index], // get img alt to certain image
     getIndex: function (callBackAlt) {
       // get index for certain image by calling fuction callback
       var resivedAlt = callBackAlt();
-      return imageAlt.findIndex((value) => value == resivedAlt);
+      return _imageAlt.findIndex((value) => value == resivedAlt);
     },
-    getimage: (index) => images[index],
-    getClarificate: (index) => clarifications[index],
+    getimage: (index) => _images[index],
+    getClarificate: (index) => _clarifications[index],
   };
 })();
 
@@ -41,21 +41,21 @@ data = (function () {
 view = (function () {
   console.log("it's the view");
 
-  let img = document.getElementById("ContImg");
-  let dot = document.getElementsByClassName("dot");
-  const DOMKeys = {
-    // classes and id names
-    nextClass: ".next",
-    prevClass: ".prev",
+  let _img = document.getElementById("ContImg");
+  let _dot = document.getElementsByClassName("dot");
+  const _DOMKeys = {
+    // id names
+    nextID: "next",
+    prevID: "prev",
     dot0ID: "dot0",
     dot1ID: "dot1",
     dot2ID: "dot2",
   };
 
   return {
-    getDOMKeys: DOMKeys,
+    getDOMKeys: _DOMKeys,
 
-    getAlt: () => img.alt,
+    getAlt: () => _img.alt,
 
     // get the next index where what image should be, using what button was pressed
     getNextIndex: (currentIndex, nextOrPrev) => {
@@ -77,8 +77,8 @@ view = (function () {
 
     setImage: function (newImage, newAlt) {
       // to the next image
-      img.src = newImage; // set the new image.
-      img.alt = newAlt; // set new alt
+      _img.src = newImage; // set the new image.
+      _img.alt = newAlt; // set new alt
     },
 
     setClarification: (clarification) => {
@@ -89,11 +89,11 @@ view = (function () {
     // set DOT buttons classes, apply or remove active class
     setDotState: function (index) {
       // loop through all dots.
-      for (var i = 0; i < dot.length; i++) {
+      for (var i = 0; i < _dot.length; i++) {
         if (i == index) {
-          dot[i].className += " active"; // set dot class.
+          _dot[i].className += " active"; // set dot class.
         } else {
-          dot[i].className = dot[i].className.replace(" active", ""); // remove dot class.
+          _dot[i].className = _dot[i].className.replace(" active", ""); // remove dot class.
         }
       }
     },
@@ -102,26 +102,29 @@ view = (function () {
 
 //Controller
 controller = (function (data, view) {
-  var indexFlag = 0; // flag to know if the dot button pressed two times
+  console.log("it's the model data");
+  
+  var _indexFlag = 0; // flag to know if the dot button pressed two times
   var startEvents = function () {
     const DOM = view.getDOMKeys;
+    const buttonType = "click";
 
     // EventListener for each button
     document
-      .querySelector(DOM.nextClass)
-      .addEventListener("click", () => setNewImage("next"));
+      .getElementById(DOM.nextID)
+      .addEventListener(buttonType, () => setNewImage("next"));
     document
-      .querySelector(DOM.prevClass)
-      .addEventListener("click", () => setNewImage("prev"));
+      .getElementById(DOM.prevID)
+      .addEventListener(buttonType, () => setNewImage("prev"));
     document
       .getElementById(DOM.dot0ID)
-      .addEventListener("click", () => setStateByIndex(0));
+      .addEventListener(buttonType, () => setStateByIndex(0));
     document
       .getElementById(DOM.dot1ID)
-      .addEventListener("click", () => setStateByIndex(1));
+      .addEventListener(buttonType, () => setStateByIndex(1));
     document
       .getElementById(DOM.dot2ID)
-      .addEventListener("click", () => setStateByIndex(2));
+      .addEventListener(buttonType, () => setStateByIndex(2));
   };
 
   let setNewImage = function (nextOrPrev) {
@@ -145,15 +148,15 @@ controller = (function (data, view) {
   let setDot = function (index) {
     // calling setdot to change the dot state
     view.setDotState(index);
-    indexFlag = index;
+    _indexFlag = index;
   };
 
   let setStateByIndex = (index) => {
     // change the DOTState and set the image for the dot button that pressed
-    if (index != indexFlag) {
+    if (index != _indexFlag) {
       setNewImageByIndex(index);
       setDot(index);
-      indexFlag = index;
+      _indexFlag = index;
     }
   };
 
