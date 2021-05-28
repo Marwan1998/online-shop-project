@@ -1,17 +1,17 @@
 
 function Data() {
 
-    var name;
-    var name1;
+    var Email;
+    
 
     return {
 
-        getName: function() {
+        getEmail: function() {
             
-            return name;
+            return Email;
         },
-        setName: function(sentName) {
-            name=sentName;
+        setEmail: function(sentEmail) {
+            Email=sentEmail;
         }
     }
 
@@ -42,14 +42,14 @@ function UI() {
             return document.getElementById(DOMstrings.input).value;
 
         },
-        setPara: function(name){
+        setPara: function(Email){
 
            
-            localStorage.setItem('UserName',name); 
-            name1="Great!,we will inform you about the newest collection on your E-Mail: "
-            +localStorage.getItem('UserName');
+            localStorage.setItem('UserEmail',Email); 
+            Email1="Great!,we will inform you about the newest collection on your E-Mail: "
+            +localStorage.getItem('UserEmail');
             
-            document.getElementById(DOMstrings.p1).textContent=name1;
+            document.getElementById(DOMstrings.p1).textContent=Email1;
         }
        
 
@@ -77,19 +77,18 @@ function Controller(data, view) {
        
         var input;
         input = view.getInput();
-        var Dom1=view.getDOMstrings();
-
+        
         if ( input == '') {
 
 
-            alert('you must write something ' );
+            alert('Pleas dont leave your Email Blank! ' );
 
 
         } else {
 
         
-         data.setName(input);
-         view.setPara(data.getName());
+         data.setEmail(input);
+         view.setPara(data.getEmail());
          
         }
         

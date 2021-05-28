@@ -4,8 +4,8 @@ function M() {
     
      var text1 = " We Nav Clothing are a designer clothing brand that";
      var text2=  "\n Designes, publish & sell our own Brand goods (NAV) via";
-     var text3= "\n Internet, we are also especialed in all type of cloths, shoe and bags";
-     var text4=   "\n- With Our best Regards, NAV Clothing Board members";
+     var text3= "\n Internet, we are also especilized in all type of cloths, shoe and bags";
+     var text4=   "\n- With Our best Regards, NAV Clothing Board members:-";
 
                
     var list = ["Hannibal Emter", "Marwan Algadi","Sofiane AL-Fazea","M.Bakcouch"];
@@ -92,6 +92,5 @@ function C(data, view) {
 
 c = new C(new M(), new V());
 
-// c.work();
 c.init();
 
