@@ -103,7 +103,7 @@ view = (function () {
 //Controller
 controller = (function (data, view) {
   console.log("it's the model data");
-  
+
   var _indexFlag = 0; // flag to know if the dot button pressed two times
   var startEvents = function () {
     const DOM = view.getDOMKeys;
@@ -125,6 +125,14 @@ controller = (function (data, view) {
     document
       .getElementById(DOM.dot2ID)
       .addEventListener(buttonType, () => setStateByIndex(2));
+
+    document.getElementById("ContImg").addEventListener(buttonType, () => {
+      // needs to add ContImg to the _DOMKeys and put it like enumerable: false
+      window.location.href = "../view/product.html";
+
+      document.getElementById("ContImg").style = "cursor: pointer"; // add this style to the css, not j
+    });
+
   };
 
   let setNewImage = function (nextOrPrev) {
