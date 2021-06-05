@@ -1,4 +1,4 @@
-export default function products(){
+ function products(){
 
   return [
     {
@@ -46,3 +46,9 @@ export default function products(){
     
   ];
 }
+
+function addedCart(){
+  return [];
+}
+
+export {products, addedCart};
