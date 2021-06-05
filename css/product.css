@@ -111,6 +111,7 @@ body {
     align-items: center;
     padding: 8px 20px;
     font-size: 1.8rem;
+    color: #1bbfe9;
     transition: .5s;
     opacity: 0;
     visibility: hidden;
