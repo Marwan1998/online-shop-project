@@ -48,7 +48,27 @@
 }
 
 function addedCart(){
-  return [];
+  return [
+    {
+      id: "id1",
+      prodName: "custom shoe",
+      prodImg: '../images/productsImages/shoe1.jpg',
+      price: 39.99,
+    },
+    {
+      id: "id2",
+      prodName: "for you",
+      prodImg: '../images/productsImages/shoe2.jpg',
+      price: 20,
+    },
+    {
+      id: "id3",
+      prodName: "special shirt",
+      prodImg: '../images/productsImages/tshirt2.png',
+      price: 60,
+    },
+  ];
 }
+
 
 export {products, addedCart};

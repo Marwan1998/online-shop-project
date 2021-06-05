@@ -22,8 +22,7 @@ export default function controle(data, view) {
       console.log(prod.id);
       data.addToCart(prod);
 
-    
-      // TODO:2 once the user clicks the cart page, a for loop will loops through the new array and render the objects.
+
     });
   }
 

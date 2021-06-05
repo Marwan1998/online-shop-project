@@ -7,4 +7,4 @@ var View = new view();
 var Controle = new controle(Data, View);
 
 
-Controle;
+// console.log(Controle);

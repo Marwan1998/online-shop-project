@@ -5,6 +5,7 @@ export default function model(){
 
     let _newProduct = new products();
     let _addToCart = new addedCart();
+    // let Arr =  arr;
     
     return {
 
@@ -15,9 +16,12 @@ export default function model(){
 
         addToCart: (prod) => {
             _addToCart.push(prod);
-            // console.log(_addToCart);
+            console.log(_addToCart);
+
+            // Arr.push(prod);
+            // console.log(Arr);
         },
     }
     
 
-};
+}
