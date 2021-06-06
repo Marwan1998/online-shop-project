@@ -3,7 +3,7 @@ export default function model() {
   const _AddedCart = [];
   const arrLength = localStorage.length;
   
-  for(let i = 0; i < arrLength; i++){
+  for(let i = 0; i < arrLength; i++){ // get all localstorage data and save it to a private array
     _AddedCart[i] = JSON.parse(Object.values(localStorage)[i]);	
   }
 
@@ -29,8 +29,8 @@ export default function model() {
     deleteProd: (prodID) => {
       const index = ProdIndex(prodID);
       if (index > -1) {
-        _AddedCart.splice(index, 1);
-        localStorage.removeItem(prodID);
+        _AddedCart.splice(index, 1); // remove product from array
+        localStorage.removeItem(prodID); // remove product from localstorage
       }
       console.log(_AddedCart);
     },

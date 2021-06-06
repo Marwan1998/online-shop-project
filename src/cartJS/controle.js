@@ -7,7 +7,7 @@ controle = (function (data, view) {
   sendProduct(productsData);
 
   function sendProduct(productData) {
-    productData.forEach((product) => {
+    productData.forEach((product) => { // show all products
       view.addProduct(product);
       setListener(product.id);
     });
@@ -20,6 +20,7 @@ controle = (function (data, view) {
       data.deleteProd(prodID);
       view.clearView();
       sendProduct(productsData);
+      view.sendMessage("Successfully Removed");
     });
   }
 })(new Model(), new View());
