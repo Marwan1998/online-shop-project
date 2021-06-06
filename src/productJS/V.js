@@ -1,6 +1,6 @@
 export default function view() {
 
-
+  
   return {
     renderProducts: (product) => {
       let colDiv = document.createElement("div");

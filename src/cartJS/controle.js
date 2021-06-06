@@ -2,7 +2,6 @@ import Model from "./model.js";
 import View from "./view.js";
 
 controle = (function (data, view) {
-
   const productsData = data.getProdData();
 
   sendProduct(productsData);
@@ -23,5 +22,4 @@ controle = (function (data, view) {
       sendProduct(productsData);
     });
   }
-  
 })(new Model(), new View());

@@ -1,8 +1,5 @@
-// import {addedCart} from "../productJS/productsData.js";
-
 export default function model() {
 
-  // var _AddedCart = new addedCart();
   const _AddedCart = [];
   const arrLength = localStorage.length;
   
