@@ -201,3 +201,25 @@ body {
     transform: translateY(0px);
     transition-delay: .7s;
 } 
+
+/* ------------------ Message Style ------------- */
+.alert-box {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px; 
+    color: #2c2c2c;
+    font-weight: bold;
+    background-color: #a89eb1;
+    border-color: #a89eb1;
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+    width: 100%;
+    }
+    
+    .success {
+
+        display: none;
+    }
+    
