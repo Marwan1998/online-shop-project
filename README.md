@@ -6,7 +6,8 @@
 
 ## Notes About The Project:
 - You can add as many products as it needs by just adding them to the products array
-- 
+- **IT'S IMPORTANT to start the project with "Live Server"**
+Because there is live rendering in products and cart pages
 
 
 
